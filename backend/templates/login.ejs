@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link href="/static/styles.css" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <h1>Logga in</h1>
+        <%= error %>
+        <form action="/admin/login" method="post">
+            <label for="username">Användarnamn: </label><input id="username" type="text" name="username" required <% if (focus == 'username'){ %> autofocus <% } %> value="<%= username %>"><br>
+            <label for="password">Lösenord: <input id="password" type="password" name="password" required <% if (focus == 'password'){ %> autofocus <% } %>><br>
+            <input type="submit"  value="Logga in">
+        </form>
+    </div>
+</body>
+</html>
