@@ -17,7 +17,7 @@ app.use(session({
         maxAge: 1000 * 60 * 30, //keep the user logged in for 30 mins
     }
 }))
-app.use('/static', express.static(path.join(__dirname, '/public')))
+app.use('/admin/static', express.static(path.join(__dirname, '/public')))
 app.use(express.urlencoded())
 
 app.get('/admin', (req, res) => {
